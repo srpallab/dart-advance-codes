@@ -1,14 +1,12 @@
 import 'package:dart_advance_codes/extensions.dart';
 import 'package:flutter/material.dart';
 
+enum Type { cat, dog }
+
 abstract class CanRun {
-  String get type {
-    if (this is Cat) {
-      return "cat";
-    } else {
-      return "Something else";
-    }
-  }
+  final Type type;
+
+  const CanRun({required this.type});
 
   @mustCallSuper
   void run() {
@@ -17,6 +15,8 @@ abstract class CanRun {
 }
 
 class Cat extends CanRun {
+  const Cat() : super(type: Type.cat);
+
   @override
   void run() {
     super.run();
@@ -24,13 +24,15 @@ class Cat extends CanRun {
   }
 }
 
-class Dog extends CanRun {}
+class Dog extends CanRun {
+  const Dog() : super(type: Type.dog);
+}
 
 void testIt() {
-  Cat cat = Cat();
+  const Cat cat = Cat();
   cat.run();
   cat.type.log();
-  Dog dog = Dog();
+  const Dog dog = Dog();
   dog.run();
   dog.type.log();
 }

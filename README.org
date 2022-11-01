@@ -4,4 +4,7 @@
   - We can add logic to abstract method. But it no longer remain
     abstract method. 
   - ~@mustCallSuper~ use to make ~super~ mandatory.
+  - Abstract classes can have constructors.
+  - If abstract classes have constructors, sub classes have to
+    implement or call that constructors.
 * Isolate
