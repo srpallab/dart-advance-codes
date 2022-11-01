@@ -2,6 +2,14 @@ import 'package:dart_advance_codes/extensions.dart';
 import 'package:flutter/material.dart';
 
 abstract class CanRun {
+  String get type {
+    if (this is Cat) {
+      return "cat";
+    } else {
+      return "Something else";
+    }
+  }
+
   @mustCallSuper
   void run() {
     "CanRun's run function is called".log();
@@ -16,9 +24,15 @@ class Cat extends CanRun {
   }
 }
 
+class Dog extends CanRun {}
+
 void testIt() {
   Cat cat = Cat();
   cat.run();
+  cat.type.log();
+  Dog dog = Dog();
+  dog.run();
+  dog.type.log();
 }
 
 class AbstractClassDemo extends StatelessWidget {
