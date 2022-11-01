@@ -1,2 +1,4 @@
 * Abstract Class
+  - keyword ~extends~ can inherit One Class
+  - keyword ~with~ can inherit Multiple Class
 * Isolate

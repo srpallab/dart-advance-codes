@@ -1,3 +1,4 @@
+import 'package:dart_advance_codes/abstract_class_demo.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,8 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.pink),
-      home: const Scaffold(),
-    );
+        theme: ThemeData(primarySwatch: Colors.pink),
+        home: const AbstractClassDemo());
   }
 }
