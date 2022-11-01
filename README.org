@@ -7,4 +7,10 @@
   - Abstract classes can have constructors.
   - If abstract classes have constructors, sub classes have to
     implement or call that constructors.
+  - Abstract classes as ~mixins~: When abstract classes don't have
+    constructors, they can be mixed into existing classes. Then we use
+    ~with~ keyword.
+* ~Mixins~
+  - ~Mixins~ are abstract classes that can't have constructors.
+  - They can have abstract or implemented methods
 * Isolate
