@@ -1,4 +1,7 @@
 * Abstract Class
   - keyword ~extends~ can inherit One Class
   - keyword ~with~ can inherit Multiple Class
+  - We can add logic to abstract method. But it no longer remain
+    abstract method. 
+  - ~@mustCallSuper~ use to make ~super~ mandatory.
 * Isolate

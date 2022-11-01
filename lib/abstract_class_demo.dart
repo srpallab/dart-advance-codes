@@ -1,14 +1,24 @@
+import 'package:dart_advance_codes/extensions.dart';
 import 'package:flutter/material.dart';
 
 abstract class CanRun {
-  void run();
+  @mustCallSuper
+  void run() {
+    "CanRun's run function is called".log();
+  }
 }
 
 class Cat extends CanRun {
   @override
   void run() {
-    // TODO: implement run
+    super.run();
+    "Cat running is called".log();
   }
+}
+
+void testIt() {
+  Cat cat = Cat();
+  cat.run();
 }
 
 class AbstractClassDemo extends StatelessWidget {
@@ -16,6 +26,7 @@ class AbstractClassDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    testIt();
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
