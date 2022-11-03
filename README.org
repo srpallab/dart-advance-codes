@@ -13,4 +13,6 @@
 * ~Mixins~
   - ~Mixins~ are abstract classes that can't have constructors.
   - They can have abstract or implemented methods
+  - Constrains on ~mixins~: This allow you to limit who the ~mixin~
+    can be used on.
 * Isolate

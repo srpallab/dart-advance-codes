@@ -1,14 +1,18 @@
 import 'package:dart_advance_codes/extensions.dart';
 import 'package:flutter/material.dart';
 
-mixin CanRun {
+abstract class Animal {
+  const Animal();
+}
+
+mixin CanRun on Animal {
   int get speed;
   void run() {
     "Running with the speed of ${speed}km/h".log();
   }
 }
 
-class Cat with CanRun {
+class Cat extends Animal with CanRun {
   @override
   int speed = 10;
 }
