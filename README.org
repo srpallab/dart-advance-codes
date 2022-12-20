@@ -16,3 +16,10 @@
   - Constrains on ~mixins~: This allow you to limit who the ~mixin~
     can be used on.
 * Isolate
+  - Isolate are non-shared-memory threads of code that can run in
+    parallel.
+  - They are like threads or processes
+  - Each isolate has its own memory pool and a single thread that has
+    an event loop.
+  - Hogging the event-loop of the main isolate might cause jerkiness.
+  - The main isolate is reserved for the ~UI~ of your app.
