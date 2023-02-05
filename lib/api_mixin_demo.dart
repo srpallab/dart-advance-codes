@@ -40,10 +40,7 @@ class ApiMixinDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     testIt();
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text("API Mixins Demo"),
-      ),
+      appBar: AppBar(centerTitle: true, title: const Text("API Mixins Demo")),
     );
   }
 }

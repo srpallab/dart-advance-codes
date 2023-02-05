@@ -21,5 +21,22 @@
   - They are like threads or processes
   - Each isolate has its own memory pool and a single thread that has
     an event loop.
+  - The event loop of an isolate is simple
+    - ~start -> loop -> end~
   - Hogging the event-loop of the main isolate might cause jerkiness.
   - The main isolate is reserved for the ~UI~ of your app.
+  - Heavy tasks should be offloaded to a background worker.
+  - It also called worker isolate.
+  - Every isolate, upon finishing it's work, can send an object back
+    to its owner.
+  - compute() function available for Flutter developer but not on web.
+  - compute() function wraps itself around an isolate.
+  - Message passing between isolates can be heavy because it involves
+    coping memory contents.
+  - using Isolate exit the memory is assigned to the receiving isolate
+    and it's complexity is O(1).
+  - ~Isolate.spawn()~ the new isolate will become part of the caller
+    isolate group.
+  - ~Isolate.exit()~ works only if the isolates are in the same
+    group. 
+
