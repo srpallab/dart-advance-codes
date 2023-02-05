@@ -5,12 +5,6 @@ import 'package:dart_advance_codes/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-extension GetCallOnUri on Object {
-  Future<HttpClientResponse> getUrl(String url) => HttpClient()
-      .getUrl(Uri.parse(url))
-      .then((HttpClientRequest request) => request.close());
-}
-
 mixin CanMakeGetCall {
   String get url;
   @useResult

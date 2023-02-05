@@ -1,6 +1,5 @@
+import 'package:dart_advance_codes/testing_isolates.dart';
 import 'package:flutter/material.dart';
-
-import 'api_mixin_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.pink),
-      home: const ApiMixinDemo(),
+      home: const TestingIsolates(),
     );
   }
 }

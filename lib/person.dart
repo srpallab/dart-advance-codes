@@ -7,6 +7,9 @@ class Person {
 
   const Person({required this.name, required this.age});
 
+  @override
+  String toString() => "$name ($age)";
+
   Person.formJson(Map<String, dynamic> json)
       : name = json['name'] as String,
         age = json['age'] as int;
