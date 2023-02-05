@@ -1,4 +1,4 @@
-import 'package:dart_advance_codes/isolates_streams.dart';
+import 'package:dart_advance_codes/isolate_parse_more_json.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.pink),
-      home: const IsolatesStreams(),
+      home: const IsolateParseMoreJson(),
     );
   }
 }
