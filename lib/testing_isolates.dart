@@ -14,7 +14,7 @@ Future<Iterable<Person>> getPersons() async {
 void _getPersons(SendPort sp) async {
   const url =
       'https://raw.githubusercontent.com/srpallab/vue-form-db/main/person.json';
-  final persons = await url
+  final persons = await ''
       .getUrl(url)
       .then((response) => response.transform(utf8.decoder).join())
       .then((jsonString) => json.decode(jsonString) as List<dynamic>)
